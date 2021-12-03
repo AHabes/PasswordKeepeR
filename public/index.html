@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PasswordKeepeR</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <script src="/js/passwordEngine.js"></script>
+    <link rel="stylesheet" href="/styles/FE.css">
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">PasswordKeepR</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/password">My passwords</a>
+                <a class="nav-item nav-link" href="/">New Password</a>
+            </div>
+            <div class="col ">
+            </div>
+
+            <div class="col ">
+            </div>
+
+        </div>
+    </nav>
+</header>
+<body>
+
+<div id="container">
+    <h2>Password generator</h2>
+
+    <form action="/password" method="post">
+        <table id="main">
+            <tr>
+                <td>Password</td>
+                <td><input type="text" name="password" id="display"></td>
+            </tr>
+
+            <tr>
+                <td>Password length:</td>
+                <td><input type='text' name="passwordLength"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="notification"></td>
+            </tr>
+
+            <tr>
+                <td> Includes numbers (0-9)?</td>
+                <td><input type="checkbox" name="numbers" value="numbers">
+                </td>
+            </tr>
+
+            <tr>
+                <td> Includes upper case letters?</td>
+                <td><input type="checkbox" name="upperCase" value="upperCase">
+                </td>
+            </tr>
+
+            <tr>
+                <td> Includes lower case letters?</td>
+                <td><input type="checkbox" name="lowerCase" value="lowerCase">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td id="criteriaNotification"></td>
+            </tr>
+
+            <tr>
+                <td>Category:</td>
+                <td>
+                    <select name="category" >
+                        <option value="Social">Social</option>
+                        <option value="Work">Work</option>
+                        <option value="Entertainment">Entertainment</option>
+                    </select>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit" name="generate" class="btn btn-primary">Generate</button>
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                </td>
+            </tr>
+            <tr></tr>
+
+        </table>
+    </form>
+</div>
+</body>
+</html>

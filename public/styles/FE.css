@@ -1,0 +1,50 @@
+#container {
+    border: 1px solid black;
+    width: 700px;
+    height: 550px;
+    margin: 1em;
+}
+
+tr {
+    height: 40px;
+}
+
+td {
+    width: 450px;
+    align-items: center;
+}
+
+button {
+    width: 90px;
+    height: 40px;
+}
+
+
+#saveButton {
+    width: 180px;
+}
+
+input {
+    width: 250px;
+}
+
+select {
+    width: 250px;
+}
+
+.error-short-password {
+    font-size: 0.8em;
+    color: red;
+    margin-bottom: 0.1em;
+}
+
+.error-no-criteria {
+    font-size: 0.8em;
+    color: red;
+    /*margin-top: 0.8em;*/
+}
+
+.generated-password {
+    font-weight: bold;
+    /*width: 250px;*/
+}
