@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   const MINIMUM_PASSWORD_LENGTH = 8;
 
   function makePassword(length, numbers, upperCase, LowerCase) {
@@ -47,7 +47,7 @@ $(document).ready(function () {
     return result;
   }
 
-  const generateNewPassword = function (length, numbers, upperCase, lowerCase) {
+  const generateNewPassword = function(length, numbers, upperCase, lowerCase) {
     let regenerate = false;
     let result = "";
     do {
@@ -75,15 +75,15 @@ $(document).ready(function () {
       if ((lowerCase && !check.includes("L")) || (upperCase && !check.includes("U")) || (numbers && !check.includes("N"))) {
         regenerate = true;
       }
-    } while (regenerate)
+    } while (regenerate);
     return result;
-  }
+  };
 
-  const generatePassword = function () {
+  const generatePassword = function() {
     const form = $("form");
     const table = $("table");
 
-    form.submit(function (e) {
+    form.submit(function(e) {
 
       // serialize the form inputs into JSON object
       const data = $(this).serializeArray();
@@ -103,7 +103,7 @@ $(document).ready(function () {
         if (element.value === 'lowerCase') {
           lowerCase = true;
         }
-      })
+      });
 
       // error message CSS classes
       const errorShortPassword = $('.error-short-password');
@@ -156,12 +156,12 @@ $(document).ready(function () {
           const passwordElement = $(`<tr><td></td><td>
           </td></tr>`).addClass("generated-password");
 
-          $('#display').val(password)
+          $('#display').val(password);
           table.append(saveButton);
           table.append(passwordElement);
 
-          $('#saveButton').on('click', function () {
-            form[0].submit()
+          $('#saveButton').on('click', function() {
+            form[0].submit();
           });
 
         } else {
